@@ -19,7 +19,7 @@
             <h2 class="tituloFormulario">Registro</h2>
             <p class="subtituloFormulario">Crea tu Cuenta</p>
             <div class="selectorCuenta">
-                <button class="selectorBotonActivo">Persona</button>
+                <button class="selectorBoton active">Persona</button>
                 <button class="selectorBoton">Empresa</button>
             </div>
             <form action="" class="formularioRegistro">
@@ -37,11 +37,41 @@
                     <label for="email">Correo Electrónico</label>
                     <div class="inputConIcon">
                         <input type="email" id="email" placeholder="tu@email.com">
-                        <span class="inputIcon"></span>
+                        <span class="inputIcon">@</span>
                     </div>
                 </div>
+                <div class="grupoFormulario">
+                    <label for="password">Contraseñas</label>
+                    <div class="inputConIcon">
+                        <input type="password" id="password" placeholder="•••••••••">
+                        <span class="inputIcon">👁️</span>
+                    </div>
+                </div>
+                <div class="grupoFormulario">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <div class="inputConIcon">
+                        <input type="password" id="confirmPassword" placeholder="•••••••••">
+                        <span class="inputIcon">👁️</span>
+                    </div>
+                </div>
+                <button type="submit" class="crearCuenta">Crear Cuenta</button>
             </form>
+            <div class="separador">
+                <span>O continúa con</span>
+            </div>
+            <div class="loginSocial">
+                <button class="botonSocial google">
+                    <img src="../IMG/logoGoogle.png" alt="Logo de Google"/>
+                    Google
+                </button>
+                <button class="botonSocial facebook">
+                    <img src="../IMG/logoFacebook.png" alt="Logo de Facebook">
+                    Facebook
+                </button>
+            </div>
+            <p class="textoLink">¿Ya tienes una cuenta? <a href="../index.html" class="loginLink">Inicia Sesión Aquí</a></p>
         </div>
+        <div class="imagePlaceholder"></div>
     </div>
 </body>
 </html>
