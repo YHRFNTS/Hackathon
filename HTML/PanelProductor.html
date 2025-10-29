@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panel del Productor — AirChain (Mockup)</title>
+  <style>
+    :root{
+      --bg: #405938;
+      --panel: #3E4A3B;
+      --glass: rgba(255,255,255,0.05);
+      --glass-2: rgba(255,255,255,0.06);
+      --accent: #236d36;
+      --muted: rgba(255,255,255,0.7);
+      --card-radius: 14px;
+      --gap: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: linear-gradient(50deg, #405938 100%, #1D330F 100%);
+      color: #e6f5ea;
+      -webkit-font-smoothing: antialiased;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      background: rgba(62, 74, 59, 0.95);
+      border-radius:12px;
+      padding:26px;
+      box-shadow: 0 8px 32px rgba(29, 51, 15, 0.37);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      background: #3E4A3B;
+      padding: 15px 20px;
+      border-radius: 8px;
+    }
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    .logo{
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #236d36;
+    }
+    h1{
+      font-size: 22px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    header .actions{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* Grid */
+    .grid{
+      display:grid; grid-template-columns: repeat(12,1fr); gap:var(--gap);
+    }
+
+    .card{
+      background: #233b24;
+      border-radius: var(--card-radius);
+      padding: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .btn {
+      background-color: #3c5440;
+      color: #f0f0f0;
+      padding: 8px 16px;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #265631;
+      cursor: pointer;
+    }
+
+    .kpi{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+    .kpi .value{font-size:28px;font-weight:700;color: #fff;}
+    .kpi .muted{font-size:12px;color:var(--muted)}
+
+    /* layout placements similar to screenshot */
+    .top-kpis{grid-column: 1 / -1; display:grid; grid-template-columns: repeat(3, 1fr); gap:var(--gap); margin-bottom:6px}
+    .large{grid-column: 1 / 7}
+    .medium{grid-column: 7 / 10}
+    .medium2{grid-column:10 / 13}
+
+    .wide-left{grid-column:1 / 8}
+    .wide-right{grid-column:8 / 13}
+
+    .full{grid-column:1 / -1}
+
+    /* small KPI row at bottom */
+    .kpi-row{display:grid; grid-template-columns: repeat(4,1fr); gap:var(--gap)}
+    .kpi-mini{padding:12px;text-align:center}
+    .kpi-mini .num{font-weight:700;font-size:20px}
+
+    /* list / monthly */
+    .list{display:flex;flex-direction:column;gap:8px}
+    .list .row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);}
+
+    /* progress bar */
+    .progress{
+      height: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress > i{
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #236d36, #2d8544) !important;
+      transition: width 0.6s ease;
+    }
+
+    /* comparative / map */
+    .map{
+      height: 180px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+    }
+
+    /* responsive */
+    @media (max-width:980px){
+      .top-kpis{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(6,1fr)}
+      .large{grid-column:1/7}
+      .medium{grid-column:1/4}
+      .medium2{grid-column:4/7}
+      .wide-left{grid-column:1/7}
+      .wide-right{grid-column:1/7}
+      .kpi-row{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:520px){
+      body{padding:12px}
+      .container{padding:14px}
+      .grid{grid-template-columns:repeat(1,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AC</div>
+        <div>
+          <h1>Panel del Productor</h1>
+          <div style="font-size:12px;color:var(--muted)">Gestiona tu producción y visualiza el impacto de tu cultivo</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn">Resumen General</button>
+        <button class="btn">Registrar Cultivo</button>
+        <button class="btn">Historial de Capturas</button>
+        <button class="btn">Mis Tokens</button>
+        <button class="btn">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- Top KPIs -->
+      <div class="top-kpis" style="grid-column:1/-1">
+        <div class="card kpi" style="padding:22px">
+          <div style="font-size:12px;color:var(--muted)">CO₂ Capturado</div>
+          <div class="value">245.8 t</div>
+          <div style="color:#7be5a9;font-size:12px">+15.2% este mes</div>
+        </div>
+
+        <div class="card kpi" style="padding:22px">
+          <div style="font-size:12px;color:var(--muted)">Tokens Generados</div>
+          <div class="value">1847</div>
+          <div style="color:#7be5a9;font-size:12px">+8.7% este mes</div>
+        </div>
+
+        <div class="card kpi" style="padding:22px">
+          <div style="font-size:12px;color:var(--muted)">Hectáreas Registradas</div>
+          <div class="value">12.5 ha</div>
+          <div class="muted">3 terrenos activos</div>
+        </div>
+      </div>
+
+      <!-- Left: Monthly performance -->
+      <section class="card wide-left">
+        <h3 style="margin:0 0 12px 0">Rendimiento Mensual</h3>
+        <div class="list">
+          <div class="row"><span>Enero 2024</span><strong>45.2 t CO₂</strong></div>
+          <div class="row"><span>Febrero 2024</span><strong>52.8 t CO₂</strong></div>
+          <div class="row"><span>Marzo 2024</span><strong>48.1 t CO₂</strong></div>
+          <div class="row"><span>Abril 2024</span><strong>61.3 t CO₂</strong></div>
+          <div class="row"><span>Mayo 2024</span><strong>58.7 t CO₂</strong></div>
+          <div class="row"><span>Junio 2024</span><strong>64.2 t CO₂</strong></div>
+          <div style="height:10px"></div>
+          <div class="progress"><i style="width:70%;background:linear-gradient(90deg,var(--accent),#79d89d);"></i></div>
+        </div>
+      </section>
+
+      <!-- Right: Token values -->
+      <aside class="card wide-right">
+        <h3 style="margin:0 0 12px 0">Valor de Tokens</h3>
+        <div style="display:flex;justify-content:space-between;gap:20px;align-items:flex-start">
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;color:var(--muted);margin-bottom:8px"><span>Tokens Activos</span><strong>973</strong></div>
+            <div style="display:flex;justify-content:space-between;color:var(--muted);margin-bottom:8px"><span>Valor Estimado</span><strong>$437.85</strong></div>
+            <div style="display:flex;justify-content:space-between;color:var(--muted);margin-bottom:8px"><span>Tokens Vendidos</span><strong>387</strong></div>
+            <div style="display:flex;justify-content:space-between;color:var(--muted);margin-bottom:8px"><span>Ingresos Totales</span><strong>$174.15</strong></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Distribución de Tokens</div>
+          <div class="progress" style="height:14px"><i style="width:48%;background:linear-gradient(90deg,#4fd28d,#55c78a);"></i></div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:8px">
+            <span>Activos 973</span>
+            <span>Vendidos 387</span>
+            <span>Pendientes 487</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Comparative terrenos -->
+      <div class="card" style="grid-column:1/7; min-height:160px">
+        <h3 style="margin:0 0 12px 0">Comparativa de Terrenos</h3>
+        <div style="height:100%;display:flex;align-items:center">
+          <div style="width:100%;height:8px;background:rgba(255,255,255,0.03);border-radius:8px;overflow:hidden"><i style="display:block;height:100%;width:65%;background:linear-gradient(90deg,var(--accent),#4bd087);"></i></div>
+        </div>
+      </div>
+
+      <!-- Ubicación de terrenos -->
+      <div class="card" style="grid-column:7/13; min-height:160px">
+        <h3 style="margin:0 0 12px 0">Ubicación de Terrenos</h3>
+        <div class="map">Mapa interactivo (mockup) — 3 ubicaciones registradas</div>
+      </div>
+
+      <!-- Bottom kpi row -->
+      <div class="card kpi-row" style="grid-column:1/13;gap:var(--gap);padding:18px">
+        <div class="card kpi-mini">
+          <div style="font-size:12px;color:var(--muted)">Eficiencia Promedio</div>
+          <div class="num">19.7 t/ha</div>
+          <div style="font-size:12px;color:#7be5a9">+2.3% vs mes anterior</div>
+        </div>
+        <div class="card kpi-mini">
+          <div style="font-size:12px;color:var(--muted)">Proyección Anual</div>
+          <div class="num">2,947 t</div>
+          <div style="font-size:12px;color:var(--muted)">Meta: 3,200 t</div>
+        </div>
+        <div class="card kpi-mini">
+          <div style="font-size:12px;color:var(--muted)">Valor Promedio Token</div>
+          <div class="num">$0.45</div>
+          <div style="font-size:12px;color:var(--muted)">Último mes</div>
+        </div>
+        <div class="card kpi-mini">
+          <div style="font-size:12px;color:var(--muted)">Certificaciones</div>
+          <div class="num">3</div>
+          <div style="font-size:12px;color:var(--muted)">Todos verificados</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // Small JS to animate some bars on load
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.progress i').forEach((el)=>{
+        const w = el.style.width || '50%';
+        el.style.width = '0%';
+        setTimeout(()=> el.style.width = w, 120);
+      });
+    });
+  </script>
+</body>
+</html>
