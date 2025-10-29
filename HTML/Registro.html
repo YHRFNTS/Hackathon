@@ -19,8 +19,8 @@
             <h2 class="tituloFormulario">Registro</h2>
             <p class="subtituloFormulario">Crea tu Cuenta</p>
             <div class="selectorCuenta">
-                <button class="selectorBoton active">Persona</button>
-                <button class="selectorBoton">Empresa</button>
+                <button class="selectorBoton active togglePersona">Persona</button>
+                <button class="selectorBoton toggleEmpresa">Empresa</button>
             </div>
             <form action="" class="formularioRegistro">
                 <div class="filaFormulario">
@@ -73,5 +73,79 @@
         </div>
         <div class="imagePlaceholder"></div>
     </div>
-</body>
+
+    <div id="formularioEmpresa" class="cambioFormulario" style="display: none;">
+        
+        <div class="empresaCard">
+            
+            <h2 class="tituloFormulario">Registro</h2>
+            <p class="subtituloFormulario">Crea tu Cuenta</p>
+            <div class="selectorCuenta">
+                <button class="selectorBoton togglePersona">Persona</button>
+                <button class="selectorBoton active toggleEmpresa">Empresa</button>
+            </div>
+            
+            <form action="">
+                
+                <div class="columnasFormulario">
+                    
+                    <div class="columnaFormulario">
+                        <h3 class="tituloColumna">Datos Generales</h3>
+                        <div class="grupoFormulario">
+                            <label for="nombreEmpresa">Nombre legal completo de la empresa</label>
+                            <input type="text" id="nombreEmpresa" placeholder="Tu empresa">
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="registroFiscal">Número de registro fiscal o de constitución</label>
+                            <input type="text" id="registroFiscal" placeholder="Número de la empresa">
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="direccionPais">Dirección legal y país de operación</label>
+                            <input type="text" id="direccionPais" placeholder="México">
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="representante">Representante legal y datos de contacto</label>
+                            <input type="text" id="representante" placeholder="Correo/Número telefonico">
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="descEmpresa">Descripción general de la empresa</label>
+                            <textarea id="descEmpresa" rows="4" placeholder="Descripción"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="columnaFormulario">
+                        <h3 class="tituloColumna">Datos del Proyecto</h3>
+                        <div class="grupoFormulario">
+                            <label>¿Como contribuyes a la reducción o captura de carbono?</label>
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="tipoProyecto">Tipo de Proyecto</label>
+                            <select id="tipoProyecto">
+                                <option value="reforestacion">Reforestación</option>
+                                <option value="energiaRenovable">Energía Renovable</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="duracionProyecto">Duración estimada del proyecto</label>
+                            <input type="text" id="duracionProyecto" placeholder="Duración">
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="descTecnica">Descripción técnica del proyecto</label>
+                            <textarea id="descTecnica" rows="4" placeholder="Descripción"></textarea>
+                        </div>
+                        <div class="grupoFormulario">
+                            <label for="estimacion">Reducción o captura estimada de CO₂</label>
+                            <input type="text" id="estimacion" placeholder="Reducción o Captura...">
+                        </div>
+                    </div>
+
+                </div> <button type="submit" class="crearCuenta">Crear Cuenta</button>
+                <p class="textoLink">¿Ya tienes una cuenta? <a href="Login.html">Inicia Sesión Aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../JS/app.js"></script>
+    </body>
 </html>
