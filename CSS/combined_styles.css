@@ -340,6 +340,12 @@ body, html {
     align-items: center;
 }
 
+.auth-buttons {
+    display: flex;
+    gap: 8px; /* small space between buttons */
+    align-items: center;
+}
+
 .logoCircular {
     width: 35px;
     height: 35px;
