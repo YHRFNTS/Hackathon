@@ -1,0 +1,918 @@
+/* ===== Start of css.css ===== */
+<<<<<<< HEAD
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #405938;
+    color: #222;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: space-between; /* form left, image right */
+    align-items: center;
+    gap: 40px;
+    min-height: calc(100vh - 160px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px; /* keep some space at edges */
+}
+
+.login-image {
+    flex: 0 0 480px; /* fixed area on the right */
+    max-width: 480px;
+    display: flex;
+    justify-content: flex-end; /* push image to the right of its area */
+    align-items: center;
+}
+
+.login-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.login-image img:hover {
+    transform: scale(1.02);
+}
+
+.login-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    flex: 0 0 420px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #236d36;
+}
+
+.form-group {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    display: block;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.remember-forgot {
+    gap: 10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-me label {
+    margin: 0;
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: #236d36;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #236d36;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #1a5228;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 12px;
+    color: #666;
+}
+
+.register-link a {
+    color: #236d36;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    margin-top: 8px;
+}
+
+.divider {
+    text-align: center;
+    color: #666;
+    position: relative;
+    margin: 10px 0 6px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    flex: 1;
+    max-width: 160px;
+}
+
+.social-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-button:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.social-button.google {
+    color: #444;
+}
+
+.social-button.facebook {
+    color: #1877f2;
+}
+
+header {
+    background: #3E4A3B;
+    color: #fff;
+    padding: 12px 20px;
+    border-color: black;
+    border-width: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0; /* keep header full-width but align inner content to the left */
+    padding-left: 12px; /* move brand slightly to the left */
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-logo {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #fff; /* fallback if image has transparency */
+}
+
+.site-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.register-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: white;
+    color: #236d36;
+}
+
+main {
+	padding: 20px;
+}
+
+/* Responsive: stack form and image on small screens */
+@media (max-width: 760px) {
+    .login-container {
+        flex-direction: column;
+        padding: 0 12px;
+        gap: 20px;
+        align-items: center;
+    }
+    .login-form {
+        max-width: 100%;
+        flex: none;
+        width: 100%;
+    }
+    .login-image {
+        max-width: 100%;
+        flex: none;
+        justify-content: center;
+    }
+    .site-logo {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+section {
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(50deg, #405938 100%, #1D330F 100%);
+    
+}
+
+.mainHeader {
+    background-color: #3E4A3B; 
+    padding: 12px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoCircular {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 12px; 
+}
+
+.logoText {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.loginButton {
+    background-color: #5a665a; 
+    color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.loginButton:hover {
+    background-color: #6a7869;
+    cursor: pointer;
+}
+
+.content{
+    height: max-content;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario{
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 8px 32px 0px rgba(29, 51, 15, 0.37);
+    backdrop-filter: blur(2.5px);
+    padding: 10px 20px;
+}
+
+/* ===== End of css.css ===== */
+
+/* ===== Start of style.css ===== */
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.mainHeader {
+    background-color: #3E4A3B; 
+    padding: 12px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoCircular {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 12px; 
+}
+
+.logoText {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.loginButton {
+    background-color: #5a665a; 
+    color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.loginButton:hover {
+    background-color: #6a7869;
+    cursor: pointer;
+}
+
+.contenidoPrincipal {
+    background-color: #3E4A3B; 
+    min-height: calc(100vh - 55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.formularioRegistro {
+    background-color: #5a665a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #e0e0e0;
+    margin-right: 40px; 
+}
+
+.tituloFormulario {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtituloFormulario {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.selectorCuenta {
+    display: flex;
+    background-color: #4a544a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.selectorBoton {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    color: #cccccc;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.selectorBotonActivo {
+    background-color: #6a7869;
+    color: #f0f0f0;
+    font-weight: 600;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.selectorBoton:not(.active):hover {
+    background-color: #5a665a;
+}
+
+.formularioRegistro{
+    margin-bottom: 25px;
+}
+
+.filaFormulario {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.grupoFormulario {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.grupoFormulario label {
+    display: block;
+    font-size: 13px;
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+.grupoFormulario input {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #4a544a;
+    border: 1px solid #6a7869;
+    border-radius: 8px;
+    color: #f0f0f0;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.grupoFormulario input::placeholder {
+    color: #99a599;
+}
+
+.grupoFormulario input:focus {
+    border-color: #007bff;
+}
+
+.inputConIcon {
+    display: flex;
+    align-items: center;
+    background-color: #4a544a;
+    border: 1px solid #6a7869;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.inputConIcon:focus-within { 
+    border-color: #007bff;
+}
+
+.inputConIcon input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding-right: 0;
+}
+
+.inputConIcon .inputIcon {
+    padding: 0 12px;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.crearCuenta {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.crearCuenta:hover {
+    background-color: #0056b3;
+}
+
+.separador {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #bbbbbb;
+    font-size: 13px;
+    margin: 25px 0;
+}
+
+.separador::before,
+.separador::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #6a7869;
+    margin: 0 10px;
+}
+
+.loginSocial {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.botonSocial {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #6a7869;
+    background-color: #4a544a;
+    color: #f0f0f0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.botonSocial img {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.botonSocial:hover {
+    background-color: #5a665a;
+    border-color: #7a887a;
+}
+
+.textoLink {
+    text-align: center;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+.textoLink {
+    color: #007bff; /* Color azul para el enlace */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.textoLink:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    max-width: 500px;
+    height: 550px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .contenidoPrincipal {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .registration-form-card {
+        margin-right: 0; /* Quita el margen a la derecha */
+        margin-bottom: 30px; /* Añade margen abajo */
+        max-width: 400px; /* Ajusta el ancho máximo */
+    }
+    
+    .imagePlaceholder {
+        max-width: 400px; /* Ajusta el ancho máximo de la imagen */
+        height: 300px; /* Reduce la altura para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 500px) {
+    .registration-form-card {
+        padding: 20px;
+    }
+    .form-row {
+        flex-direction: column; /* Apila Nombre y Apellido en pantallas muy pequeñas */
+        gap: 0;
+    }
+    .social-login-buttons {
+        flex-direction: column; /* Apila los botones sociales */
+    }
+}
+/* ===== End of style.css ===== */
+
+/* ===== Start of StyleSheet.css ===== */
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(50deg, #405938 100%, #1D330F 100%);
+}
+
+.mainHeader {
+    background-color: #3E4A3B; 
+    padding: 12px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoCircular {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 12px; 
+}
+
+.logoText {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.loginButton {
+    background-color: #5a665a; 
+    color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.loginButton:hover {
+    background-color: #6a7869;
+    cursor: pointer;
+}
+.content{
+    height: max-content;
+}
+
+.formulario{
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 8px 32px 0px rgba(29, 51, 15, 0.37);
+    backdrop-filter: blur(2.5px);
+    padding: 10px 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-layout {
+    display: flex;
+    gap: 38px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.airchain-card {
+    background: #233b24;
+    color: #e0ead4;
+    border-radius: 16px;
+    padding: 28px 32px;
+    width: 410px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.airchain-card h2 {
+    margin-top: 0;
+    color: #d5ffb3;
+}
+
+.airchain-card ul {
+    padding-left: 18px;
+    margin-bottom: 22px;
+}
+
+.airchain-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.airchain-buttons button {
+    background: #3c5440;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 25px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1em;
+    margin-top: 7px;
+}
+
+.airchain-buttons button:hover {
+    background: #265631;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.image-card {
+    background: #f6f7f4;
+    border-radius: 16px;
+    width: 400px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.image-card img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.stats-card {
+    background: #233b24;
+    color: #e0ead4;
+    border-radius: 16px;
+    padding: 24px 22px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.stats-card h3 {
+    margin-top: 0;
+    font-size: 1.18em;
+    margin-bottom: 13px;
+    color: #d5ffb3;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.stats-label {
+    display: block;
+    font-size: 0.93em;
+    color: #b8cbb8;
+}
+
+.stats-value {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.stats-change {
+    font-size: 1.22em;
+    font-weight: 600;
+}
+.stats-change.positive {
+    color: #70ff99;
+}
+.stats-change.negative {
+    color: #ff877a;
+}
+
+/* ===== End of StyleSheet.css ===== */
+
