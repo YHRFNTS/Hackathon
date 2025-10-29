@@ -1,9 +1,10 @@
+<<<<<<< HEAD
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #326d22;
+    background: #405938;
     color: #222;
     min-height: 100vh;
 }
@@ -218,7 +219,7 @@ body {
 }
 
 header {
-    background: #236d36;
+    background: #3E4A3B;
     color: #fff;
     padding: 12px 20px;
     border-color: black;
@@ -312,4 +313,85 @@ section {
 }
 
 footer {
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(50deg, #405938 100%, #1D330F 100%);
+    
+}
+
+.mainHeader {
+    background-color: #3E4A3B; 
+    padding: 12px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoCircular {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 12px; 
+}
+
+.logoText {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.loginButton {
+    background-color: #5a665a; 
+    color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.loginButton:hover {
+    background-color: #6a7869;
+    cursor: pointer;
+}
+
+.content{
+    height: max-content;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario{
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 8px 32px 0px rgba(29, 51, 15, 0.37);
+    backdrop-filter: blur(2.5px);
+    padding: 10px 20px;
 }
