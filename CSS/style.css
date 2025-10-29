@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.mainHeader {
+    background-color: #3E4A3B; 
+    padding: 12px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoCircular {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 12px; 
+}
+
+.logoText {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.loginButton {
+    background-color: #5a665a; 
+    color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.loginButton:hover {
+    background-color: #6a7869;
+    cursor: pointer;
+}
+
+.contenidoPrincipal {
+    background-color: #3E4A3B; 
+    min-height: calc(100vh - 55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.formularioRegistro {
+    background-color: #5a665a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #e0e0e0;
+    margin-right: 40px; 
+}
+
+.tituloFormulario {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtituloFormulario {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.selectorCuenta {
+    display: flex;
+    background-color: #4a544a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.selectorBoton {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    color: #cccccc;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.selectorBotonActivo {
+    background-color: #6a7869;
+    color: #f0f0f0;
+    font-weight: 600;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.selectorBoton:not(.active):hover {
+    background-color: #5a665a;
+}
+
+.formularioRegistro{
+    margin-bottom: 25px;
+}
+
+.filaFormulario {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.grupoFormulario {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Para que la etiqueta esté en su propia línea */
+    font-size: 13px;
+    color: #bbbbbb;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #4a544a; /* Fondo de los inputs */
+    border: 1px solid #6a7869; /* Borde sutil */
+    border-radius: 8px;
+    color: #f0f0f0;
+    font-size: 15px;
+    outline: none; /* Quita el borde azul al hacer focus */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #99a599; /* Color del placeholder */
+}
+
+.form-group input:focus {
+    border-color: #007bff; /* Borde azul al hacer focus */
+}
+
+/* Input con Icono (Correo, Contraseña) */
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    background-color: #4a544a;
+    border: 1px solid #6a7869;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.input-with-icon:focus-within { /* Esto aplica cuando el input interno está enfocado */
+    border-color: #007bff;
+}
+
+.input-with-icon input {
+    flex: 1; /* Para que el input ocupe el espacio restante */
+    background-color: transparent; /* El input no tiene fondo propio */
+    border: none; /* Quitamos el borde del input individual */
+    padding-right: 0; /* Ajuste de padding para el icono */
+}
+
+.input-with-icon .input-icon {
+    padding: 0 12px;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+/* Botón Crear Cuenta */
+.create-account-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff; /* Color azul distintivo */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.create-account-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Separador "O continúa con" --- */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #bbbbbb;
+    font-size: 13px;
+    margin: 25px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #6a7869;
+    margin: 0 10px;
+}
+
+/* --- Botones de Inicio de Sesión Social --- */
+.social-login-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.social-button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #6a7869;
+    background-color: #4a544a;
+    color: #f0f0f0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-button img {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.social-button:hover {
+    background-color: #5a665a;
+    border-color: #7a887a;
+}
+
+/* --- Texto "¿Ya tienes una cuenta?" --- */
+.login-link-text {
+    text-align: center;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+.login-link {
+    color: #007bff; /* Color azul para el enlace */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- Contenedor de la Imagen Lateral --- */
+.image-placeholder {
+    width: 100%;
+    max-width: 500px; /* Ajusta el ancho máximo de la imagen según necesites */
+    height: 550px; /* Ajusta la altura, similar a la del formulario */
+    background-color: #e0e0e0; /* Color gris del placeholder */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Puedes añadir una imagen de fondo aquí si quieres probar: */
+    /* background-image: url('tu-imagen.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+/* --- Media Queries para Responsividad (Opcional pero recomendado) --- */
+@media (max-width: 900px) {
+    .main-content-wrapper {
+        flex-direction: column; /* Apila el formulario y la imagen en pantallas pequeñas */
+        padding: 20px;
+    }
+
+    .registration-form-card {
+        margin-right: 0; /* Quita el margen a la derecha */
+        margin-bottom: 30px; /* Añade margen abajo */
+        max-width: 400px; /* Ajusta el ancho máximo */
+    }
+    
+    .image-placeholder {
+        max-width: 400px; /* Ajusta el ancho máximo de la imagen */
+        height: 300px; /* Reduce la altura para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 500px) {
+    .registration-form-card {
+        padding: 20px;
+    }
+    .form-row {
+        flex-direction: column; /* Apila Nombre y Apellido en pantallas muy pequeñas */
+        gap: 0;
+    }
+    .social-login-buttons {
+        flex-direction: column; /* Apila los botones sociales */
+    }
+}

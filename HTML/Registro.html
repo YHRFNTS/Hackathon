@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/css.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Registro</title>
 </head>
 <body>
@@ -12,7 +12,36 @@
             <div class="logoCircular"></div>
             <span class="logoText">AirChain</span>
         </div>
-        <a href="../Index.html" class="loginButton">Iniciar Sesión</a>
+        <a href="../index.html" class="loginButton">Iniciar Sesión</a>
     </header>
+    <div class="contenidoPrincipal">
+        <div class="formularioRegistro">
+            <h2 class="tituloFormulario">Registro</h2>
+            <p class="subtituloFormulario">Crea tu Cuenta</p>
+            <div class="selectorCuenta">
+                <button class="selectorBotonActivo">Persona</button>
+                <button class="selectorBoton">Empresa</button>
+            </div>
+            <form action="" class="formularioRegistro">
+                <div class="filaFormulario">
+                    <div class="grupoFormulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Tu Nombre">
+                    </div>
+                    <div class="grupoFormulario">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellidos" placeholder="Tu Apellido">
+                    </div>
+                </div>
+                <div class="grupoFormulario">
+                    <label for="email">Correo Electrónico</label>
+                    <div class="inputConIcon">
+                        <input type="email" id="email" placeholder="tu@email.com">
+                        <span class="inputIcon"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
