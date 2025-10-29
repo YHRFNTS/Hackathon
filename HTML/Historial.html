@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panel del Productor — Historial de Capturas</title>
+  <link rel="stylesheet" href="../CSS/combined_styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AC</div>
+        <div>
+          <h1>Panel del Productor</h1>
+          <div style="font-size:12px;color:var(--muted)">Gestiona tu producción y visualiza el impacto de tu cultivo</div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn">Resumen General</button>
+        <button class="btn">Registrar Cultivo</button>
+        <button class="btn">Historial de Capturas</button>
+        <button class="btn">Mis Tokens</button>
+        <button class="btn">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main>
+      <h2>Historial de Capturas</h2>
+      <div style="color:var(--muted);margin-bottom:20px;font-size:14px">Visualiza todas las mediciones verificadas del CO₂ capturado por tus cultivos</div>
+
+      <div class="top-kpis">
+        <div class="card kpi"><span>Total CO₂ Capturado</span><div class="value">96.2 toneladas</div></div>
+        <div class="card kpi"><span>Registros Verificados</span><div class="value">4</div></div>
+        <div class="card kpi"><span>Pendientes de Verificación</span><div class="value">3</div></div>
+      </div>
+
+      <section class="card" style="margin-top:24px">
+        <h3 style="margin:0 0 8px 0">📊 Evolución de Capturas</h3>
+        <div class="chart">Mostrar gráficos</div>
+      </section>
+
+      <section class="filters">
+        <h3 style="margin:18px 0 10px 0">🧩 Filtros</h3>
+        <div class="row">
+          <label>Estado</label>
+          <select><option>Todos los estados</option><option>Verificado</option><option>Pendiente</option><option>Rechazado</option></select>
+          <label>Terreno</label>
+          <select><option>Todos los terrenos</option><option>Terreno Norte A1</option><option>Terreno Sur B2</option></select>
+          <label>Fecha Desde</label>
+          <input type="date" />
+          <label>Fecha Hasta</label>
+          <input type="date" />
+          <button class="btn green">Solicitar nueva verificación</button>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:20px">
+        <h3 style="margin:0 0 10px 0">📋 Registros de Capturas</h3>
+        <table class="table">
+          <thead>
+            <tr><th>Fecha</th><th>Terreno</th><th>CO₂ Capturado (t)</th><th>Verificado por</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>14/01/2024</td><td>Terreno Norte A1</td><td>12.5</td><td>Dr. María González</td><td><span class="status verificado">Verificado</span></td></tr>
+            <tr><td>18/01/2024</td><td>Terreno Sur B2</td><td>8.3</td><td>Ing. Carlos Ruiz</td><td><span class="status verificado">Verificado</span></td></tr>
+            <tr><td>24/01/2024</td><td>Terreno Este C1</td><td>15.2</td><td>-</td><td><span class="status pendiente">Pendiente</span></td></tr>
+            <tr><td>31/01/2024</td><td>Terreno Norte A1</td><td>13.8</td><td>Dr. Ana López</td><td><span class="status verificado">Verificado</span></td></tr>
+            <tr><td>04/02/2024</td><td>Terreno Oeste D1</td><td>6.7</td><td>-</td><td><span class="status rechazado">Rechazado</span></td></tr>
+            <tr><td>09/02/2024</td><td>Terreno Sur B2</td><td>9.1</td><td>-</td><td><span class="status pendiente">Pendiente</span></td></tr>
+            <tr><td>14/02/2024</td><td>Terreno Este C1</td><td>16.4</td><td>Dr. María González</td><td><span class="status verificado">Verificado</span></td></tr>
+            <tr><td>19/02/2024</td><td>Terreno Norte A1</td><td>14.2</td><td>-</td><td><span class="status pendiente">Pendiente</span></td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
