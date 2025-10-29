@@ -1,5 +1,5 @@
 /* ===== Start of css.css ===== */
-<<<<<<< HEAD
+
 
 body {
     font-family: Arial, sans-serif;
@@ -663,7 +663,7 @@ body, html {
     color: #bbbbbb;
 }
 
-.textoLink {
+.loginLink {
     color: #007bff; /* Color azul para el enlace */
     text-decoration: none;
     font-weight: 500;
@@ -690,7 +690,7 @@ body, html {
         padding: 20px;
     }
 
-    .registration-form-card {
+    .formularioRegistro {
         margin-right: 0; /* Quita el margen a la derecha */
         margin-bottom: 30px; /* Añade margen abajo */
         max-width: 400px; /* Ajusta el ancho máximo */
@@ -703,14 +703,14 @@ body, html {
 }
 
 @media (max-width: 500px) {
-    .registration-form-card {
+    .formularioRegistro {
         padding: 20px;
     }
-    .form-row {
+    .filaFormulario {
         flex-direction: column; /* Apila Nombre y Apellido en pantallas muy pequeñas */
         gap: 0;
     }
-    .social-login-buttons {
+    .loginSocial {
         flex-direction: column; /* Apila los botones sociales */
     }
 }
