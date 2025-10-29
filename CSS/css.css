@@ -53,6 +53,10 @@ body, html {
     cursor: pointer;
 }
 
+.content{
+    height: max-content;
+}
+
 .row{
     display: flex;
     justify-content: space-around;
@@ -64,4 +68,13 @@ body, html {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.formulario{
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 8px 32px 0px rgba(29, 51, 15, 0.37);
+    backdrop-filter: blur(2.5px);
+    padding: 10px 20px;
 }
