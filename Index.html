@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AirChain Plataforma</title>
-    <link rel="stylesheet" href="CSS/combined_styles.css">
+    <link rel="stylesheet" href="CSS/landing.css">
 </head>
 <body>
     <header class="mainHeader">
@@ -12,8 +13,8 @@
             <span class="logoText">AirChain</span>
         </div>
         <div class="auth-buttons">
-            <a href="/HTML/Login.html" class="loginButton">Iniciar sesión</a>
-            <a href="/HTML/Registro.html" class="loginButton">Registro</a>
+            <a href="HTML/Login.html" class="loginButton">Iniciar sesión</a>
+            <a href="HTML/Registro.html" class="loginButton">Registro</a>
         </div>
     </header>
 
@@ -37,17 +38,17 @@
                   <li>Entre otras...</li>
                 </ul>
                 <div class="airchain-buttons">
-                  <button>Comprar</button>
-                  <button>Vender</button>
-                  <button>Canjear</button>
-                  <button>Historial</button>
+                  <button onclick="location.href='HTML/PanelProductor.html'">Comprar</button>
+                  <button onclick="location.href='HTML/PanelProductor.html'">Vender</button>
+                  <button onclick="location.href='HTML/PanelProductor.html'">Canjear</button>
+                  <button onclick="location.href='HTML/Historial.html'">Historial</button>
                 </div>
             </div>
 
             <!-- Sección derecha: Imagen + Estadísticas -->
             <div class="right-column">
                 <div class="image-card">
-                    <img src="/IMG/doro2.webp" alt="Imagen de Ejemplo" />
+                    <img src="IMG/doro2.webp" alt="Imagen de Ejemplo" />
                 </div>
                 <div class="stats-card">
                     <h3>Estadísticas en Tiempo Real</h3>

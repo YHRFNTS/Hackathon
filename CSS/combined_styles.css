@@ -555,12 +555,7 @@ body, html {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.selectorBotonActivo {
-    background-color: #6a7869;
-    color: #f0f0f0;
-    font-weight: 600;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-}
+ 
 
 .selectorBoton:not(.active):hover {
     background-color: #5a665a;

@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+body, html { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f4f4; }
+
+.mainHeader { background-color: #3E4A3B; padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; }
+.logoContainer { display: flex; align-items: center; }
+.logoCircular { width: 35px; height: 35px; background-color: #f0f0f0; border-radius: 50%; margin-right: 12px; }
+.logoText { color: white; font-size: 26px; font-weight: 600; }
+.loginButton { background-color: #5a665a; color: #f0f0f0; padding: 8px 16px; border-radius: 5px; text-decoration: none; font-size: 14px; font-weight: 500; transition: background-color 0.3s ease; }
+.loginButton:hover { background-color: #6a7869; cursor: pointer; }
+
+.contenidoPrincipal { background-color: #3E4A3B; min-height: calc(100vh - 55px); display: flex; justify-content: center; align-items: center; padding: 40px 20px; }
+.formularioRegistro { background-color: #5a665a; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 100%; max-width: 420px; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); color: #e0e0e0; margin-right: 40px; }
+.tituloFormulario { font-size: 28px; font-weight: 700; color: #f0f0f0; margin-bottom: 8px; text-align: center; }
+.subtituloFormulario { font-size: 15px; color: #cccccc; margin-bottom: 25px; text-align: center; }
+
+.selectorCuenta { display: flex; background-color: #4a544a; border-radius: 8px; overflow: hidden; margin-bottom: 25px; }
+.selectorBoton { flex: 1; padding: 10px 15px; border: none; background-color: transparent; color: #cccccc; font-size: 15px; cursor: pointer; transition: background-color 0.3s ease, color 0.3s ease; }
+.selectorBoton.active { background-color: #6a7869; color: #f0f0f0; font-weight: 600; border-radius: 8px; box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); }
+.selectorBoton:not(.active):hover { background-color: #5a665a; }
+
+.filaFormulario { display: flex; gap: 15px; margin-bottom: 15px; }
+.grupoFormulario { flex: 1; margin-bottom: 15px; }
+.grupoFormulario label { display: block; font-size: 13px; color: #bbbbbb; margin-bottom: 5px; }
+.grupoFormulario input { width: 100%; padding: 10px 15px; background-color: #4a544a; border: 1px solid #6a7869; border-radius: 8px; color: #f0f0f0; font-size: 15px; outline: none; transition: border-color 0.3s ease; }
+.grupoFormulario input::placeholder { color: #99a599; }
+.grupoFormulario input:focus { border-color: #007bff; }
+
+.inputConIcon { display: flex; align-items: center; background-color: #4a544a; border: 1px solid #6a7869; border-radius: 8px; overflow: hidden; transition: border-color 0.3s ease; }
+.inputConIcon:focus-within { border-color: #007bff; }
+.inputConIcon input { flex: 1; background-color: transparent; border: none; padding-right: 0; }
+.inputConIcon .inputIcon { padding: 0 12px; color: #cccccc; font-size: 16px; }
+
+.crearCuenta { width: 100%; padding: 12px 20px; background-color: #007bff; color: white; border: none; border-radius: 8px; font-size: 17px; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease; margin-top: 10px; margin-bottom: 20px; }
+.crearCuenta:hover { background-color: #0056b3; }
+
+.separador { display: flex; align-items: center; text-align: center; color: #bbbbbb; font-size: 13px; margin: 25px 0; }
+.separador::before, .separador::after { content: ''; flex: 1; border-bottom: 1px solid #6a7869; margin: 0 10px; }
+
+.loginSocial { display: flex; gap: 15px; margin-bottom: 25px; }
+.botonSocial { flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px 15px; border-radius: 8px; border: 1px solid #6a7869; background-color: #4a544a; color: #f0f0f0; font-size: 15px; cursor: pointer; transition: background-color 0.3s ease, border-color 0.3s ease; }
+.botonSocial img { margin-right: 8px; width: 16px; height: 16px; }
+.botonSocial:hover { background-color: #5a665a; border-color: #7a887a; }
+
+.textoLink { text-align: center; font-size: 14px; color: #bbbbbb; }
+.loginLink { color: #007bff; text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+.textoLink:hover { color: #0056b3; text-decoration: underline; }
+
+.imagePlaceholder { width: 100%; max-width: 500px; height: 550px; background-color: #e0e0e0; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+
+@media (max-width: 900px) {
+    .contenidoPrincipal { flex-direction: column; padding: 20px; }
+    .formularioRegistro { margin-right: 0; margin-bottom: 30px; max-width: 400px; }
+    .imagePlaceholder { max-width: 400px; height: 300px; }
+}
+
+@media (max-width: 500px) {
+    .formularioRegistro { padding: 20px; }
+    .filaFormulario { flex-direction: column; gap: 0; }
+    .loginSocial { flex-direction: column; }
+}
+
+.cambioFormulario { display: flex; justify-content: center; align-items: center; padding: 40px 20px; background-color: #3E4A3B; min-height: calc(100vh - 55px); }
+.empresaCard { background-color: #5a665a; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 100%; max-width: 900px; color: #e0e0e0; }
+.columnasFormulario { display: flex; gap: 30px; margin-bottom: 30px; }
+.columnaFormulario { flex: 1; }
+.tituloColumna { font-size: 18px; font-weight: 600; color: #f0f0f0; margin-bottom: 20px; border-bottom: 1px solid #6a7869; padding-bottom: 10px; }
+.grupoFormulario textarea, .grupoFormulario select { width: 100%; padding: 10px 15px; background-color: #4a544a; border: 1px solid #6a7869; border-radius: 8px; color: #f0f0f0; font-size: 15px; outline: none; transition: border-color 0.3s ease; font-family: inherit; }
+.grupoFormulario textarea { resize: vertical; min-height: 80px; }
+.grupoFormulario textarea::placeholder { color: #99a599; }
+.grupoFormulario textarea:focus, .grupoFormulario select:focus { border-color: #007bff; }
+
+@media (max-width: 900px) { .columnasFormulario { flex-direction: column; gap: 0; } }
+
+

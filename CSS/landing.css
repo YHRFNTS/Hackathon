@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(50deg, #405938 100%, #1D330F 100%);
+}
+
+.mainHeader {
+    background-color: #3E4A3B; 
+    padding: 12px 30px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoCircular {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-right: 12px; 
+}
+
+.logoText {
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.loginButton {
+    background-color: #5a665a; 
+    color: #f0f0f0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.loginButton:hover {
+    background-color: #6a7869;
+    cursor: pointer;
+}
+
+.content{
+    height: max-content;
+}
+
+.main-layout {
+    display: flex;
+    gap: 38px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.airchain-card {
+    background: #233b24;
+    color: #e0ead4;
+    border-radius: 16px;
+    padding: 28px 32px;
+    width: 410px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.airchain-card h2 {
+    margin-top: 0;
+    color: #d5ffb3;
+}
+
+.airchain-card ul {
+    padding-left: 18px;
+    margin-bottom: 22px;
+}
+
+.airchain-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.airchain-buttons button {
+    background: #3c5440;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 25px;
+    cursor: pointer;
+    transition: background-color 0.2s;    
+    font-size: 1em;
+    margin-top: 7px;
+}
+
+.airchain-buttons button:hover {
+    background: #265631;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.image-card {
+    background: #f6f7f4;
+    border-radius: 16px;
+    width: 400px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.image-card img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.stats-card {
+    background: #233b24;
+    color: #e0ead4;
+    border-radius: 16px;
+    padding: 24px 22px;
+    width: 400px;
+    margin-top: 10px;
+}
+
+.stats-card h3 {
+    margin-top: 0;
+    font-size: 1.18em;
+    margin-bottom: 13px;
+    color: #d5ffb3;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.stats-label {
+    display: block;
+    font-size: 0.93em;
+    color: #b8cbb8;
+}
+
+.stats-value {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.stats-change {
+    font-size: 1.22em;
+    font-weight: 600;
+}
+
+.stats-change.positive {
+    color: #70ff99;
+}
+
+.stats-change.negative {
+    color: #ff877a;
+}
+
+
