@@ -55,9 +55,13 @@ body {
     align-items: center;
 }
 
+
+
 .login-image img {
     max-width: 100%;
     height: auto;
+    width: 450px;
+    max-height: 500px;
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
